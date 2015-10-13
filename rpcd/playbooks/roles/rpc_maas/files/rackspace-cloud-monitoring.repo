@@ -1,0 +1,4 @@
+[rackspace]
+name=Rackspace Monitoring
+baseurl=http://stable.packages.cloudmonitoring.rackspace.com/redhat-7-x86_64
+enabled=1

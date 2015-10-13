@@ -14,8 +14,16 @@
 # limitations under the License.
 
 - include: repo_setup.yml
+  when: ansible_os_family == 'Debian'
+
+- include: repo_setup_redhat.yml
+  when: ansible_os_family == 'RedHat'
 
 - include: package_install.yml
+  when: ansible_os_family == 'Debian'
+
+- include: package_install_redhat.yml
+  when: ansible_os_family == 'RedHat'
 
 - include: raxmon_cli_config.yml
 

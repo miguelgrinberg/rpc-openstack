@@ -270,6 +270,13 @@ maas_apt_packages:
   - rackspace-monitoring-agent
   - mariadb-client
 
+maas_rpm_keys:
+  - { url: "https://monitoring.api.rackspacecloud.com/pki/agent/redhat-7.asc", state: "present" }
+
+maas_rpm_packages:
+  - rackspace-monitoring-agent
+  - mariadb
+
 #
 # maas_pip_packages: Packages we need but are not built by openstack-ansible
 #
